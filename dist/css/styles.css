@@ -205,6 +205,10 @@ ul {
   .card .card-content .card-list li {
     font-size: 1rem;
   }
+
+  .card .card-form {
+    margin-bottom: 40px;
+  }
   .card .card-btn,
   .card .card-input {
     width: 100%;
