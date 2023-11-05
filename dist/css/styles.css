@@ -31,10 +31,11 @@ ul {
 }
 
 /* Init */
-.container .card {
+.container .card#init {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  display: none;
 }
 
 .card .card-content {
@@ -84,6 +85,10 @@ ul {
   width: 80%;
 }
 
+.card .card-form {
+  position: relative;
+}
+
 .card .card-input {
   margin-bottom: 15px;
 }
@@ -103,6 +108,38 @@ ul {
 
 .card .card-illustration .illustration-2 {
   display: none;
+}
+
+/* Success Page */
+.container {
+  display: flex;
+  justify-content: center;
+}
+.container .card#success-page {
+  width: 40%;
+  padding: 35px 40px;
+  /* display: none; */
+}
+
+.card#success-page .card-header {
+  font-size: 2rem;
+  line-height: 1.1;
+  margin: 10px 0 20px;
+}
+
+.card#success-page .card-text {
+  width: 100%;
+  font-size: 0.8rem;
+  margin-bottom: 20px;
+}
+
+.card#success-page .card-btn {
+  width: 100%;
+}
+
+.card#success-page .card-btn:hover {
+  background-color: #ff6742;
+  background: linear-gradient(45deg, #ff6742, #ff5476);
 }
 
 /* Utilities Classes */
@@ -148,12 +185,21 @@ ul {
   color: var(--color-white);
 }
 
+.text-danger {
+  color: #ff5476;
+}
+
 .text-large {
   font-size: 2.3rem;
+  line-height: 1.2;
 }
 
 .text-small {
   font-size: 0.8rem;
+}
+
+.text-bold {
+  font-weight: 700;
 }
 
 /* Input */
@@ -231,5 +277,46 @@ ul {
 
   .card .card-illustration .illustration-1 {
     display: none;
+  }
+
+  .container {
+    display: flex;
+    justify-content: normal;
+    height: 100%;
+  }
+  .container .card#success-page {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 35px 40px;
+    height: 100%;
+
+    /* display: none; */
+  }
+
+  .card img {
+    margin-top: 50px;
+  }
+
+  .card#success-page .card-header {
+    font-size: 2.3rem;
+    line-height: 1.1;
+    margin: 10px 0 20px;
+  }
+
+  .card#success-page .card-text {
+    width: 100%;
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .card#success-page .card-btn {
+    width: 100%;
+    margin-top: 170px;
+  }
+
+  .card#success-page .card-btn:hover {
+    background-color: #ff6742;
+    background: linear-gradient(45deg, #ff6742, #ff5476);
   }
 }
