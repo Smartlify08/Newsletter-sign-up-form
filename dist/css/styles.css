@@ -192,7 +192,6 @@ ul {
   .card .card-content {
     padding: 10px 25px;
     order: 2;
-    border: 2px solid;
   }
   .card .card-content .card-header {
     font-size: 1.9rem;
@@ -212,7 +211,6 @@ ul {
   }
 
   .card .card-illustration {
-    border: 2px solid;
     margin: 0;
     padding: 0;
     order: 1;
