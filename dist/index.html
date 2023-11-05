@@ -21,88 +21,62 @@
     <title>
       Frontend Mentor | Newsletter sign-up form with success message
     </title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
-    <!-- Sign-up form start -->
-    <section class="card">
-      <div class="illustration">
-        <img
-          src="images/illustration-sign-up-desktop.svg"
-          alt=""
-          class="img-1"
-        />
-        <img
-          src="images/illustration-sign-up-mobile.png"
-          alt=""
-          class="img-2"
-        />
-      </div>
-      <div class="check-section">
-        <header>
-          <h1 class="text-dark">Stay updated!</h1>
-        </header>
-        <p class="join">
-          Join 60,000+ product managers receiving monthly updates on:
-        </p>
-        <div class="list">
-          <div class="checked-item">
-            <img src="images/icon-list.svg" alt="" width="20px" height="20px" />
-            <p>Product discovery and building what matters</p>
-          </div>
-          <div class="checked-item">
-            <img src="images/icon-list.svg" alt="" width="20px" height="20px" />
-            <p>Measuring to ensure updates are a success</p>
-          </div>
-          <div class="checked-item">
-            <img src="images/icon-list.svg" alt="" width="20px" height="20px" />
-            <p>And much more!</p>
-          </div>
-        </div>
+    <div class="container">
+      <div class="card" id="init">
+        <div class="card-content">
+          <h1 class="card-header text-dark text-large">Stay Updated!</h1>
+          <p class="card-text text-dark text-small">
+            Join 60,000+ product managers receiving monthly updates on:
+          </p>
 
-        <div class="form-section">
-          <form action="#" id="newsletter">
-            <div class="email-section">
-              <label for="email">Email address</label>
+          <ul class="updates card-list">
+            <div class="card-list-item">
+              <img src="images/icon-list.svg" alt="" width="20px" />
+              <li>Product discovery and building what matters</li>
+            </div>
+            <div class="card-list-item">
+              <img src="images/icon-list.svg" alt="" width="20px" />
+              <li>Measuring to ensure updates are a success</li>
+            </div>
+
+            <div class="card-list-item">
+              <img src="images/icon-list.svg" alt="" />
+
+              <li>And much more</li>
+            </div>
+          </ul>
+
+          <div class="card-form">
+            <form action="">
+              <label for="email" class="text-dark">Email address</label>
               <input
                 type="email"
                 id="email"
-                class="email"
+                class="card-input form-input"
                 placeholder="email@company.com"
               />
-            </div>
-            <div>
-              <input
-                type="submit"
-                class="btn btn-submit"
-                value="Subscribe to monthly newsletter"
-              />
-            </div>
-          </form>
+              <button class="btn btn-dark card-btn">
+                Subscribe to monthly newsletter
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="card-illustration">
+          <img
+            src="images/illustration-sign-up-desktop.svg"
+            alt="Illustration"
+            class="illustration-1"
+          />
+          <img
+            src="images/illustration-sign-up-mobile.svg"
+            alt="illustration"
+            class="illustration-2"
+          />
         </div>
       </div>
-    </section>
-
-    <!-- Sign-up form end -->
-
-    <!-- Success message start -->
-
-    <!-- Success message end -->
-    <!-- <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div> -->
+    </div>
   </body>
 </html>
