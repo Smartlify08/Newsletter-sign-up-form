@@ -9,6 +9,7 @@
   --color-dark: hsl(234, 29%, 20%);
   --color-secondary: hsl(235, 18%, 26%);
   --color-grey: hsl(231, 7%, 60%);
+  --color-danger-1: #ffe8e6;
 }
 
 body {
@@ -30,12 +31,21 @@ ul {
   list-style: none;
 }
 
+.err-message {
+  position: absolute;
+  top: 0;
+  right: 20%;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
 /* Init */
 .container .card#init {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  display: none;
+  transition: 0.3s;
+  transition-property: all;
 }
 
 .card .card-content {
@@ -74,6 +84,10 @@ ul {
   font-weight: 700;
 }
 
+.card .card-btn:hover {
+  background: linear-gradient(-45deg, #ff6742 30%, #ff5476);
+}
+
 .card .card-form label,
 .card-btn,
 .card-input {
@@ -85,12 +99,12 @@ ul {
   width: 80%;
 }
 
-.card .card-form {
-  position: relative;
-}
-
 .card .card-input {
   margin-bottom: 15px;
+}
+
+.card .card-form {
+  position: relative;
 }
 
 .card .card-form label {
@@ -110,36 +124,35 @@ ul {
   display: none;
 }
 
-/* Success Page */
+/* Success page */
 .container {
   display: flex;
   justify-content: center;
 }
 .container .card#success-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   width: 40%;
-  padding: 35px 40px;
-  /* display: none; */
+  display: none;
+  padding: 20px 35px;
+  transition: 0.3s;
+  transition-property: all;
+  opacity: 0;
 }
 
 .card#success-page .card-header {
-  font-size: 2rem;
-  line-height: 1.1;
+  font-size: 2.3rem;
+  line-height: 1.2;
   margin: 10px 0 20px;
 }
 
 .card#success-page .card-text {
-  width: 100%;
-  font-size: 0.8rem;
-  margin-bottom: 20px;
+  font-size: 0.9rem;
 }
-
 .card#success-page .card-btn {
+  margin: 10px 0;
   width: 100%;
-}
-
-.card#success-page .card-btn:hover {
-  background-color: #ff6742;
-  background: linear-gradient(45deg, #ff6742, #ff5476);
 }
 
 /* Utilities Classes */
@@ -155,12 +168,13 @@ ul {
 .btn {
   background: var(--color-grey);
   border: none;
-  padding: 13px 10px;
+  padding: 15px 10px;
   border-radius: 5px;
   color: #fff;
   font-size: 0.8rem;
   cursor: pointer;
   transition: 0.5s;
+  outline: none;
 }
 
 .btn-dark {
@@ -185,13 +199,8 @@ ul {
   color: var(--color-white);
 }
 
-.text-danger {
-  color: #ff5476;
-}
-
 .text-large {
   font-size: 2.3rem;
-  line-height: 1.2;
 }
 
 .text-small {
@@ -202,12 +211,25 @@ ul {
   font-weight: 700;
 }
 
+.text-danger {
+  color: #e64e5f;
+}
+
+/*Border  */
+.border-danger {
+  border: 1px solid #e64e5f;
+}
+
 /* Input */
 .form-input {
   padding: 13px 10px;
   font-size: 0.8rem;
   border-radius: 5px;
   border: 1px solid var(--color-grey);
+}
+
+.form-input:focus {
+  outline: 1px solid var(--color-grey);
 }
 
 /* Card */
@@ -224,15 +246,26 @@ ul {
     display: block;
     min-height: 100vh;
     padding: 0;
+    background-color: var(--color-white);
   }
 
-  .container .card {
+  .err-message {
+    right: 2%;
+  }
+
+  .container {
+    padding-bottom: 50px;
+  }
+
+  .container .card#init {
     flex-direction: column;
     width: 100%;
     border-radius: 0;
     align-items: normal;
     justify-content: start;
+    gap: 2.8rem;
     padding: 0;
+    height: 100%;
   }
 
   .card .card-content {
@@ -253,7 +286,7 @@ ul {
   }
 
   .card .card-form {
-    margin-bottom: 40px;
+    margin-top: 60px 0 20px;
   }
   .card .card-btn,
   .card .card-input {
@@ -279,44 +312,16 @@ ul {
     display: none;
   }
 
+  /* Success Page */
   .container {
-    display: flex;
-    justify-content: normal;
+    display: block;
     height: 100%;
   }
+
   .container .card#success-page {
-    display: flex;
-    flex-direction: column;
     width: 100%;
-    padding: 35px 40px;
     height: 100%;
-
-    /* display: none; */
-  }
-
-  .card img {
-    margin-top: 50px;
-  }
-
-  .card#success-page .card-header {
-    font-size: 2.3rem;
-    line-height: 1.1;
-    margin: 10px 0 20px;
-  }
-
-  .card#success-page .card-text {
-    width: 100%;
-    font-size: 1rem;
-    margin-bottom: 20px;
-  }
-
-  .card#success-page .card-btn {
-    width: 100%;
-    margin-top: 170px;
-  }
-
-  .card#success-page .card-btn:hover {
-    background-color: #ff6742;
-    background: linear-gradient(45deg, #ff6742, #ff5476);
+    padding: 20px 45px;
+    justify-content: space-around;
   }
 }
